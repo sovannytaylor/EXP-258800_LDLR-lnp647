@@ -1,0 +1,3 @@
+[submodule "punctalyze"]
+	path = punctalyze
+	url = https://github.com/sovannytaylor/punctalyze-SRT.git
