@@ -1,41 +1,41 @@
-# ANA-XX_brief-description
+# EXP-258800_LDLR-lnp647
 
 *Advice for use*: This repository uses core scripts managed in a separate repository ([punctalyze](https://github.com/ocarmo/punctalyze)) to promote modularity and code reuse across projects. e module which is under heavy construction. The checklist below outlines the steps to initiate an experiment repository in a tidy manner and add the analysis submodule. The punctalyze module is under heavy construction, any changes should be committed in a non-breaking manner, as they link to the main branch. Where experiment specific changes are required, consider creating a new csat_calcs branch. Please check off the tick boxes with an 'x' as you go. This repository assumes elementary knowledge of python and git.
 
 ### if you have not already forked the punctalyze repository:
-- [ ] fork the core pipeline if you have not already
+- [x] fork the core pipeline if you have not already
         visit the [punctalyze](https://github.com/ocarmo/punctalyze) and click **"Fork"**
         this gives you a personal copy at `https://github.com/YOUR_USERNAME/punctalyze`
-- [ ] clone your fork locally by clicking **"<>Code"** at the top right of the GitHub page, then **"Open with GitHub Desktop"**
-- [ ] select your local path and open the repo by clicking the **"open in VS Code"** option
-- [ ] create a new branch named yourname_dev, always use this branch when making changes
-- [ ] continue to the checklist below
+- [x] clone your fork locally by clicking **"<>Code"** at the top right of the GitHub page, then **"Open with GitHub Desktop"**
+- [x] select your local path and open the repo by clicking the **"open in VS Code"** option
+- [x] create a new branch named yourname_dev, always use this branch when making changes
+- [x] continue to the checklist below
 
 ### if you already forked punctalyze: make your own image analysis repo
-- [ ] click the **"Use this template"** button at the top right of this template repository
-- [ ] name your project and click **"Create repository from template"**
-- [ ] clone onto your local device
-- [ ] uncomment raw_data folders in gitignore 
-- [ ] delete placeholder files raw_data folders
-- [ ] import the editable analysis submodule in vscode terminal: 
+- [x] click the **"Use this template"** button at the top right of this template repository
+- [x] name your project and click **"Create repository from template"**
+- [x] clone onto your local device
+- [x] uncomment raw_data folders in gitignore 
+- [x] delete placeholder files raw_data folders
+- [x] import the editable analysis submodule in vscode terminal: 
 ~~~ 
 git submodule add https://github.com/your_github/your_punctalyze_branch.git punctalyze 
 git submodule update --init --recursive
 ~~~
         ^^^ this adds the shared punctalyze pipeline to your repository
-- [ ] update *header* at top of README.md and *experiment details* below
-- [ ] upload raw data, or update the input_path in ```1_initial_cleanup.py```
+- [x] update *header* at top of README.md and *experiment details* below
+- [x] upload raw data, or update the input_path in ```1_initial_cleanup.py```
 
 ## Experiment details
 
 **Purpose**: 
-Detecting and analyzing intracellular puncta from light micrographs
+Detecting and analyzing intensity and puncta of K562 cells after treatment with LNP-647 carrying mRNA-GFP. This experiment takes not only cells from 90 minutes, but also after 24 hours of treatment. 
 
 **Cell Type**: 
-Neuro2a cells
+K562 cells
 
 **Instrument/techniques**: 
-LSM900, experiment block set up, 10% excitation for 40.51 sec, acquisitions at mCh 0.6% 600V.
+LSM900, 1024x1024, EGFP, Alexa-fluor 647, 4x averaging, 0.5 scan zoom, taken with definite focus settings, NEED TO INPUT THE REST OF THE SETTINGS LATER 
 
 **Data produced:** 
 See results folder
